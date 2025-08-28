@@ -46,5 +46,8 @@ vite.config.js
 * react-icons
 * sweetalert2
 
+## Decisions Made
+
+I developed a single-page web application for an imaginary IT company called NewTech. All information and content provided in the application are totally fictional. Additionally, I used free, unlicensed images sourced from www.freepik.com.
 
 
