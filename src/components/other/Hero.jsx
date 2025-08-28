@@ -1,20 +1,19 @@
 import React from "react";
+import img from "../../assets/images/bg.jpg";
 
 export default function Hero({ hero }) {
   return (
-    <div className="p-40 border rounded-xl shadow-md bg-white m-5">
-      <h1 className="text-3xl font-bold mb-4">{hero.headline}</h1>
-      <p className="text-gray-600">{hero.subText}</p>
+    <div className="relative px-20 py-20 shadow-md  overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center blur-sm"
+        style={{ backgroundImage: `url(${img})` }}
+      ></div>
 
-      <div className="flex gap-4">
-        {hero.callToActions.map((data, index) => (
-          <button
-            key={index}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg"
-          >
-            {data}
-          </button>
-        ))}
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center text-center text-white min-h-[300px]">
+        <h1 className="text-4xl font-bold mb-4">{hero.headline}</h1>
+        <p className="text-lg max-w-2xl">{hero.subText}</p>
       </div>
     </div>
   );

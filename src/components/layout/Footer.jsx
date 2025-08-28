@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -7,7 +13,7 @@ const Footer = () => {
         {/* Company Info */}
         <div>
           <h2 className="text-xl font-semibold text-white mb-4">
-            NextVision Technologies
+            NewTech Technologies
           </h2>
           <p className="text-sm">
             We build modern websites, apps, and cloud solutions to help
@@ -42,21 +48,60 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact */}
+        {/* Contact + Social */}
         <div>
           <h2 className="text-xl font-semibold text-white mb-4">Contact</h2>
-          <ul className="space-y-2 text-sm">
-            <li>Email: info@nextvision.com</li>
-            <li>Phone: +94 77 123 4567</li>
+          <ul className="space-y-2 text-sm mb-4">
+            <li>Email: info@newTech.com</li>
+            <li>Phone: +94 11 123 1234</li>
             <li>Colombo, Sri Lanka</li>
           </ul>
+
+          {/* Social Icons */}
+          <div className="flex space-x-4">
+            <a
+              href=""
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition"
+            >
+              {/* Facebook Placeholder */}
+              <span className="text-white text-lg">
+                <FaFacebook />
+              </span>
+            </a>
+            <a
+              href=""
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-400 transition"
+            >
+              {/* Twitter Placeholder */}
+              <span className="text-white text-lg">
+                <FaWhatsapp />
+              </span>
+            </a>
+            <a
+              href=""
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition"
+            >
+              {/* Instagram Placeholder */}
+              <span className="text-white text-lg">
+                <FaInstagram />
+              </span>
+            </a>
+            <a
+              href=""
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-700 transition"
+            >
+              {/* LinkedIn Placeholder */}
+              <span className="text-white text-lg">
+                <FaLinkedin />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 
       {/* Bottom bar */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} NextVision Technologies. All rights
-        reserved.
+        © {new Date().getFullYear()} NewTech Technologies. All rights reserved.
       </div>
     </footer>
   );
