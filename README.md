@@ -54,6 +54,6 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Decisions Made
 
-I developed a single-page web application for an imaginary IT company called NewTech. All information and content provided in the application are totally fictional. Additionally, I used free, unlicensed images sourced from www.freepik.com.
+I developed a single-page web application for an imaginary IT company called NewTech. All information and content provided in the application are totally fictional. Additionally, I used free and unlicensed images from www.freepik.com.
 
 
