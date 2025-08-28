@@ -10,9 +10,8 @@ function Services({ service }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      {/* Section Title */}
       <motion.h2
-        className="text-2xl font-semibold mb-8 text-center text-gray-800"
+        className="text-2xl font-bold mb-8 text-center text-gray-800"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
@@ -20,7 +19,6 @@ function Services({ service }) {
         {service.title}
       </motion.h2>
 
-      {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {service.services.map((item, index) => (
           <motion.div
@@ -30,16 +28,14 @@ function Services({ service }) {
             initial={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Full Card Image */}
             <img
               src={item.image}
               alt={item.name}
               className="w-full h-48 object-cover"
             />
 
-            {/* Service Name */}
             <div className="p-4 text-center">
-              <h3 className="text-lg font-bold">{item.name}</h3>
+              <h3 className="text-lg font-semibold">{item.name}</h3>
             </div>
           </motion.div>
         ))}

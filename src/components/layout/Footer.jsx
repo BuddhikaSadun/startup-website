@@ -1,16 +1,9 @@
-import React from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaWhatsapp,
-} from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLinkedin, FaX } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 mt-10">
       <div className="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Company Info */}
         <div>
           <h2 className="text-xl font-semibold text-white mb-4">
             NewTech Technologies
@@ -21,7 +14,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h2 className="text-xl font-semibold text-white mb-4">Quick Links</h2>
           <ul className="space-y-2 text-sm">
@@ -36,19 +28,18 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#portfolio" className="hover:text-white">
-                Portfolio
+              <a href="#overview" className="hover:text-white">
+                Overview
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-white">
-                Contact
+              <a href="#work" className="hover:text-white">
+                Work
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Contact + Social */}
         <div>
           <h2 className="text-xl font-semibold text-white mb-4">Contact</h2>
           <ul className="space-y-2 text-sm mb-4">
@@ -57,40 +48,35 @@ const Footer = () => {
             <li>Colombo, Sri Lanka</li>
           </ul>
 
-          {/* Social Icons */}
           <div className="flex space-x-4">
             <a
               href=""
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-600 transition"
             >
-              {/* Facebook Placeholder */}
               <span className="text-white text-lg">
                 <FaFacebook />
               </span>
             </a>
             <a
-              href=""
-              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-400 transition"
+              href="https://twitter.com/"
+              className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-black transition"
             >
-              {/* Twitter Placeholder */}
               <span className="text-white text-lg">
-                <FaWhatsapp />
+                <FaX />
               </span>
             </a>
             <a
-              href=""
+              href="https://www.instagram.com/"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-pink-500 transition"
             >
-              {/* Instagram Placeholder */}
               <span className="text-white text-lg">
                 <FaInstagram />
               </span>
             </a>
             <a
-              href=""
+              href="https://www.linkedin.com/"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-blue-700 transition"
             >
-              {/* LinkedIn Placeholder */}
               <span className="text-white text-lg">
                 <FaLinkedin />
               </span>
@@ -99,7 +85,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} NewTech Technologies. All rights reserved.
       </div>

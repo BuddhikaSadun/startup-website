@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 function Work({ work }) {
@@ -10,9 +9,8 @@ function Work({ work }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      {/* Section Title */}
       <motion.h2
-        className="text-3xl font-bold text-center mb-12 text-gray-800"
+        className="text-2xl font-bold text-center mb-12 text-gray-800"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
@@ -20,7 +18,6 @@ function Work({ work }) {
         {work.title}
       </motion.h2>
 
-      {/* Projects Grid */}
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {work.projects.map((project, index) => (
           <motion.div
@@ -30,24 +27,33 @@ function Work({ work }) {
             initial={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Project Image */}
             <img
               src={project.image}
               alt={project.name}
               className="w-full h-48 object-cover"
             />
 
-            {/* Content */}
             <div className="p-6 text-center">
               <h3 className="text-xl font-semibold mb-2 text-gray-900">
                 {project.name}
               </h3>
-              <p className="text-sm font-medium text-indigo-600 mb-2">
+              <p className="text-md font-medium text-indigo-600 mb-2">
                 {project.category}
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-md text-gray-700 leading-relaxed">
                 {project.description}
               </p>
+
+              <div className="pt-10 flex flex-wrap justify-center gap-2">
+                {project.tags?.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}

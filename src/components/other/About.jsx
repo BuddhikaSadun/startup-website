@@ -11,8 +11,30 @@ function About({ about }) {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
-        <h2 className="text-4xl font-bold text-gray-800 mb-6">{about.title}</h2>
-        <p className="text-lg text-gray-600 leading-relaxed">{about.content}</p>
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">{about.title}</h2>
+
+        {/* Brief Intro */}
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          {about.brief}
+        </p>
+
+        {/* Key Values */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {about.values.map((value, index) => (
+            <motion.div
+              key={index}
+              className="bg-gray-100 p-6 rounded-lg shadow-sm text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                {value.title}
+              </h3>
+              <p className="text-gray-600">{value.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
 
       {/* Right Side - Image */}
