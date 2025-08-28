@@ -16,9 +16,8 @@ function App() {
   return (
     <div className="scroll-smooth">
       <Header />
-      <section id="hero">
-        <Hero hero={heroSection} />
-      </section>
+
+      <Hero hero={heroSection} />
 
       <section id="about">
         <About about={aboutSection} />
@@ -26,7 +25,7 @@ function App() {
       <section id="services">
         <Services service={servicesSection} />
       </section>
-      <section id="portfolio">
+      <section id="work">
         <Work work={workSection} />
       </section>
 
