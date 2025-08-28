@@ -13,29 +13,35 @@ If you are developing a production application, we recommend using TypeScript wi
 
 ## Folder structure
 
-dist/
-node_modules
-public/                  
-src/
-  -assets/
-      -Images/
-      -data.jsx
-      -index.css
-      react.svg
-  -components/
-       -layout/
-         Header.jsx, Footer.jsx
-       -other/
-         About.jsx, Work.jsx, Services.jsx, Contact.jsx
-         
-  -App.jsx
-  -main.jsx
-.gitignore
-eslint.config.js
-package-lock.json
-package.json
-README.md
-vite.config.js
+├── dist/                      
+├── node_modules/             
+├── public/                   
+├── src/                      
+│   ├── assets/               
+│   │   ├── images/          
+│   │   ├── data.jsx          
+│   │   ├── index.css         
+│   │   └── react.svg         
+│   ├── components/           
+│   │   ├── layout/          
+│   │   │   ├── Footer.jsx    
+│   │   │   └── Header.jsx    
+│   │   └── other/           
+│   │       ├── About.jsx
+│   │       ├── ContactUs.jsx
+│   │       ├── Hero.jsx
+│   │       ├── Services.jsx
+│   │       └── Work.jsx
+│   ├── App.css              
+│   ├── App.jsx               
+│   └── main.jsx            
+├── .gitignore               
+├── eslint.config.js          
+├── index.html               
+├── package-lock.json        
+├── package.json             
+├── README.md                
+└── vite.config.js           
 
 ## Dependencies
 
